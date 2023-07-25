@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title id='title'>Subaru Radio</title>
+    <link rel="shortcut icon" id="favicon" href="https://s2.googleusercontent.com/s2/favicons?domain_url=https://www.subaru.com/index.html">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="radioStation.js"></script>
+    <script src="script.js"></script>
+
+    <div><temp id="temp" style='visibility: hidden'></temp></div>
+
+    <img src="https://pa1.narvii.com/7294/45f1603ebbfbb563a2fd4ac1d3c3ac4ebd952f4br1-400-225_hq.gif" id="snowingGIF"/>
+
+    <div id="overlay">
+			<div id="upToDateBox">
+				<p id="upToDateText">Your device's software is up to date.</p>
+				<button id="okButton" onclick="$('overlay').style = 'visibility: hidden'">OK</button>
+			</div>
+		</div>
+    <div id="topBar">
+      <h1 id="topWords">Radio</h1>
+    </div>
+    
+    <p src="https://i.imgur.com/xbdwSFp.png" id="homeIcon">🏠</p>
+		<div id="leftBar">
+			<button class="radioButton" id="FM">FM</button>
+      <button class="radioButton" id="AM">AM</button>
+      <button class="radioButton" id="SXM">SXM</button>
+		</div>
+
+    <div id="bottomBar">
+			<button class="bottomButton" id="G105">G105</button>
+      <button class="bottomButton" id="Hits">Hits</button>
+      <button class="bottomButton" id="Top Mix">Top Mix</button>
+      <button class="bottomButton" id="Rock">Rock</button>
+      <button class="bottomButton" id="Hold">Hold</button>
+      <button class="bottomButton" id="Hold">Hold</button>
+		</div>
+
+    <div id="rightSide">
+			<button class="rightButton" id="Browse">Browse</button>
+      <button class="rightButton" id="TuneScan">Tune Scan</button>
+      <button class="rightButton" id="Replay">Replay</button>
+      <button class="rightButton" id="DirectTune">Direct Tune</button>
+      
+      <p class='rightIMG' id="BrowseIMG" src="https://i.imgur.com/Ek9hpPh.png">📚</p>
+      <p class='rightIMG' id="TuneScanIMG" src="https://i.imgur.com/WcP63P2.png">🖨</p>
+      <p class='rightIMG' id="ReplayIMG" src="https://i.imgur.com/L7unoPn.png">🔁</p>
+      <p class='rightIMG' id="DirectTuneIMG" src="https://i.imgur.com/sW34knI.png">☎</p>
+		</div>
+
+    <div id="BrowseMenu" style='visibility: hidden'>
+      <div id="topBar">
+        <h1 id="BrowseTitle">All Stations</h1>
+        <div id="BackButton" onclick="browseMenu = false">
+          <img src="https://i.imgur.com/Gz69YWi.png" id="BackImg"></img>
+          <h1 id="BackText">Back</h1>
+        </div>
+        <img src="https://i.imgur.com/TnnY2Bv.png" id="closeImg" onclick="browseMenu = false"></img>  
+      </div>
+      <nav id='BrowseScroll'>
+      </nav>
+    </div>
+
+    <div id="radio">
+      <img id="songImg"></img>
+      
+      <h1 id="stationName">Station Name</h1>
+      <p id="stationIcon" src="https://i.imgur.com/xyXOG4k.png">🎵</p>
+      
+      <h1 id="songName">Song Name</h1>
+      <p id="songIcon" src="https://i.imgur.com/NdofTQt.png">🎶</p>
+      
+      <h1 id="artistName">Artist Name</h1>
+      <p id="artistIcon" src="https://i.imgur.com/CqNdyxg.png">🎙</p>
+    </div>
+
+    <p id="soundButton">Sound</p>
+
+    <div class="ratio" id="volumeCircle"></div>
+    <a id="volumeText"></a>
+  </body>
+</html>
